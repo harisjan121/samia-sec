@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.welcome-text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4em;
+    color: #FF6347; /* Fiery Red */
+    text-shadow: 0 0 5px #FF6347, 0 0 10px #FF6347, 0 0 15px #FF6347, 0 0 20px #FF4500, 0 0 25px #FF4500, 0 0 30px #FF4500;
+    animation: fiery-flicker 1.5s infinite alternate;
+}
+
+@keyframes fiery-flicker {
+    0% {
+        text-shadow: 0 0 5px #FF6347, 0 0 10px #FF6347, 0 0 15px #FF6347, 0 0 20px #FF4500, 0 0 25px #FF4500, 0 0 30px #FF4500;
+    }
+    50% {
+        text-shadow: 0 0 10px #FF6347, 0 0 20px #FF6347, 0 0 30px #FF6347, 0 0 40px #FF4500, 0 0 50px #FF4500, 0 0 60px #FF4500;
+    }
+    100% {
+        text-shadow: 0 0 5px #FF6347, 0 0 10px #FF6347, 0 0 15px #FF6347, 0 0 20px #FF4500, 0 0 25px #FF4500, 0 0 30px #FF4500;
+    }
+}
+
+.open-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 40px;
+    font-size: 1.8em;
+    background-color: rgba(255, 69, 0, 0.7); /* Fiery Background */
+    border: none;
+    color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.9), 0 0 25px rgba(255, 69, 0, 0.9), 0 0 35px rgba(255, 69, 0, 0.9);
+    cursor: pointer;
+    animation: fire-glow 1.5s infinite alternate;
+}
+
+.open-button:hover {
+    background-color: rgba(255, 69, 0, 0.9);
+}
+
+@keyframes fire-glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 69, 0, 0.7), 0 0 20px rgba(255, 69, 0, 0.7), 0 0 30px rgba(255, 69, 0, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 69, 0, 0.9), 0 0 40px rgba(255, 69, 0, 0.9), 0 0 50px rgba(255, 69, 0, 0.9);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 69, 0, 0.7), 0 0 20px rgba(255, 69, 0, 0.7), 0 0 30px rgba(255, 69, 0, 0.7);
+    }
+}
